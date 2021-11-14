@@ -1,8 +1,9 @@
 # app-kuber
-Web application with Kubernetes
+Web application with EC2 instance
 
-- I use AWS EKS for this task.
-- /app
-    - application with docker file
-- deploy_web.yaml - manifest for start our deploy
-- deploy.png - image with working application on localhost 
+- I use terraform for create EC2 instance with debian 10
+- main.tf - create instance
+- security.tf - create security group for instance
+- variables.tf - variables
+- user_data.tpl - file for install nginx and create index.html
+- outputs.tf - file for outputing public ip over instance
