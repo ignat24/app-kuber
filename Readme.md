@@ -1,0 +1,4 @@
+- Using yaml configuration create EC2 instance with nginx
+- Debian 10
+- AWS Cloudformation
+- ./ec2-server.yaml - configuration instance and security group
