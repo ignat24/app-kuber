@@ -1,0 +1,21 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: web-deploy
+  labels:
+    env: dev
+    app: weather
+spec:
+  selector:
+    matchLabels:
+      project: web
+  template:
+    metadata:
+      labels:
+        project: web
+    spec:
+      containers: 
+      - name: web
+        image: 242131/dev_k8s:latest
+        ports:
+          - containerPort: 80
