@@ -13,3 +13,7 @@ terraform.tfvars
 # Ansible
 # The 'playbook1.yml' was initially filtered, so I keep it here.
 ansible/playbook1.yml
+
+# Filteringing files containing environment-specific details
+**/ansible.cfg
+**/hosts.ini
