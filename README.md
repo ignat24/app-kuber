@@ -1,0 +1,7 @@
+- Terrafrom, folder `terraform`, [README.md](terraform/README.md)
+    - Create instance
+    - Security group
+    - ssh key for ansible
+- Ansible, folder `ansible`, [README.md](ansible/README.md)
+    - Install nginx
+    - Copy index.html
