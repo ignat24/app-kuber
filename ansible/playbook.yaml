@@ -1,19 +1,8 @@
----
-- name: Install nginx
-  hosts: all
-  become: yes
+- hosts: nginx
 
-  vars:
-    source_file: ./index.html
-    destin_path: /var/www/html
+  roles:
+    - role: common
+      tags: ["common"]
 
-  tasks:
-  - name: install
-    apt: name=nginx state=latest
-  - name: copy page
-    copy: src={{ source_file }} dest={{ destin_path }} mode=0555
-  - name: start
-    service: 
-      name=nginx
-      state=started
-      enabled=yes
+    - role: nginx
+      tags: ["nginx"]

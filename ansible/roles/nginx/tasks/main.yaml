@@ -1,0 +1,14 @@
+- name: Install Nginx
+  apt: name=nginx state=latest
+
+- name: Set up HTML file
+  template:
+    src: "{{ source_template }}"
+    dest: "{{ destin_file }}"
+    mode: 0555
+
+- name: Start Nginx
+  service:
+      name=nginx
+      state=started
+      enabled=yes
