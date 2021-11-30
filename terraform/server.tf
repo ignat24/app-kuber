@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_key_pair" "ssh_key" {
     key_name = "ansible-key"
-    public_key = "**************************"
+    public_key = file(var.public_key_file)
 }
 
 # Instance ====================================

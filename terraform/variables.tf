@@ -9,3 +9,8 @@ variable "app" {
 variable "env" {
     default = "crash-course"
 }
+
+variable "public_key_file" {
+  type = string
+  description = "Path to the file containing SSH public key"
+}
