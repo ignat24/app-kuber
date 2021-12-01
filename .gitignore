@@ -2,7 +2,7 @@
 /providers/dev/network/.terragrunt-cache/*
 /providers/dev/ecr/.terragrunt-cache/*
 /providers/dev/network/.terraform.lock.hcl
-/providers/dev/cluster/.terraform.lock.hcl
+/providers/dev/ecs/.terraform.lock.hcl
 /providers/dev/ecr/.terraform.lock.hcl
 /providers/dev/codebuild/.terraform.lock.hcl
 /providers/dev/codebuild/.terragrunt-cache/*
@@ -12,9 +12,11 @@
 /providers/prod/network/.terragrunt-cache
 /providers/prod/ecr/.terragrunt-cache/*
 /providers/prod/network/.terraform.lock.hcl
-/providers/prod/cluster/.terraform.lock.hcl
+/providers/prod/ecs/.terraform.lock.hcl
 /providers/prod/ecr/.terraform.lock.hcl
 /providers/prod/codebuild/.terraform.lock.hcl
 /providers/prod/codebuild/.terragrunt-cache
 /providers/prod/init/.terraform.lock.hcl
 /providers/prod/init/.terragrunt-cache
+
+
