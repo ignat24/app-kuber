@@ -1,0 +1,33 @@
+public_key_file = "/home/user/aws/ssh-keys/user.rsa.pub"
+
+sg_description = "SG for Debian web server"
+sg_tags = {
+  Name = "SG for Debian web server"
+}
+project_owner_name = "Danil"
+project_owner_surname = "Ignatushkun"
+
+ingress_fw_rules = [
+  {
+    description = "HTTP ingress"
+    from_port        = 80
+    to_port          = 80
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = []
+    prefix_list_ids  = []
+    security_groups  = []
+    self             = false
+  },
+  {
+    description      = "SSH ingress"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
+    cidr_blocks      = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = []
+    prefix_list_ids  = []
+    security_groups  = []
+    self             = false    
+  }
+]
