@@ -1,0 +1,3 @@
+source_template: "roles/nginx/templates/index.html.tpl"
+destin_file: "/var/www/html/index.html"
+project_owner: "{{ lookup('env', 'PROJECT_OWNER') or 'Danil Ignatushkin' }}"

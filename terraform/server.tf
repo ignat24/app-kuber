@@ -4,7 +4,7 @@ provider "aws" {
 
 resource "aws_key_pair" "ssh_key" {
     key_name = "ansible-key"
-    public_key = "**************************"
+    public_key = file(var.public_key_file)
 }
 
 # Instance ====================================
@@ -13,6 +13,7 @@ resource "aws_instance" "webserver"{
     ami = "ami-0245697ee3e07e755" //Debian 10
     instance_type = "t2.micro"
     vpc_security_group_ids = [aws_security_group.sg_webserver.id]
+    user_data = file(var.user_data_file)
 
   tags = {
       Name = "WebServer-${var.app}-${var.env}"

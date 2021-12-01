@@ -1,0 +1,8 @@
+- hosts: nginx
+
+  roles:
+    - role: common
+      tags: ["common"]
+
+    - role: nginx
+      tags: ["nginx"]

@@ -1,6 +1,19 @@
-.terraform/providers/registry.terraform.io/hashicorp/aws/3.65.0/linux_amd64/terraform-provider-aws_v3.65.0_x5
+# # Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
 .terraform.lock.hcl
-terraform.tfstate
-terraform.tfstate.backup
-playbook1.yml
-.terraform/providers/registry.terraform.io/hashicorp/aws/3.66.0/linux_amd64/terraform-provider-aws_v3.66.0_x5
+crash.log
+terraform.tfvars
+
+# Include 'tfplan' files to ignore the plan output of command: terraform plan -out=tfplan
+*tfplan*
+
+# Ansible
+# The 'playbook1.yml' was initially filtered, so I keep it here.
+ansible/playbook1.yml
+
+# Filteringing files containing environment-specific details
+**/ansible.cfg
+**/hosts.ini
