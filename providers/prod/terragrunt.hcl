@@ -6,7 +6,7 @@ locals {
     aws_account = "873827770697"
     aws_region = "eu-west-2"
     image_version = "0.1"
-    branch_githook = "Dev"
+    branch_githook = "ci/cd"
     buildspec_path = "providers/prod"
 
 }

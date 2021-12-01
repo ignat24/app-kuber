@@ -41,12 +41,13 @@
 - Terraform
 - Terragrunt
 - Docker
+- awc cli and configure default settings
 
 <h1>Important</h1>
 
  - I use github token in codebuild
  - Before apply you need to add your repository and token in codebuild variables
- 
+
 - Start: 
     - cd /providers/dev
     - terragrunt run-all init
