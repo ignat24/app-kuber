@@ -27,6 +27,6 @@ phases:
   
   post_build:
     commands:
-      - cd "${CODEBUILD_SRC_DIR}/providers/prod/ecs"
+      - cd "${CODEBUILD_SRC_DIR}/providers/dev/ecs"
       - terragrunt plan -var="image_version=${TAG}" 
       - terragrunt apply -var="image_version=${TAG}" -auto-approve
